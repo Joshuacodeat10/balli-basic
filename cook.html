@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #circle{
+      border: 1px solid yellow;  
+      border-radius:10000px;
+      height:50px;
+      width:50px;
+      background-color:yellow;
+      margin-left: 200px;
+    }
+    .body{
+font-family: helvetica;
+    }
+    </style>
+</head>
+<body>
+    <div id="circle" ></div>
+    <div id="right"  onclick="document.getElementById('circle').style.marginLeft='230px'; document.getElementById('right').style.display='none'; document.getElementById('right1').style.display='block';"><img src="right.png" alt=""></div>
+    <div id="right1" style="display:none;" onclick="document.getElementById('circle').style.marginLeft='260px';"><img src="right.png" alt=""></div>
+
+</body>
+</html>
