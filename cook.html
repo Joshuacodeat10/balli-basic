@@ -12,7 +12,8 @@
       height:50px;
       width:50px;
       background-color:yellow;
-      margin-left: 200px;
+      position: absolute;
+      margin-left:200;
     }
     .body{
 font-family: helvetica;
@@ -21,8 +22,21 @@ font-family: helvetica;
 </head>
 <body>
     <div id="circle" ></div>
-    <div id="right"  onclick="document.getElementById('circle').style.marginLeft='230px'; document.getElementById('right').style.display='none'; document.getElementById('right1').style.display='block';"><img src="right.png" alt=""></div>
-    <div id="right1" style="display:none;" onclick="document.getElementById('circle').style.marginLeft='260px';"><img src="right.png" alt=""></div>
+    <div id="right"  onclick="move()"><img src="right.png" alt=""></div>
+    <div id="right1" style="display:none;" onclick="document.getElementById('circle').style.marginLeft='260px';">text</div>
 
 </body>
+
+<script>
+    const item = document.getElementById('circle');
+    offsetX = circle.getBoundingClientRect().left;
+    newValue = offsetX ;
+    console.log(offsetX)
+    function move(){
+        newValue= newValue +50;
+        document.getElementById('circle').style.left=`${newValue}px`; 
+        console.log(offsetX)
+            }
+</script>
+
 </html>
