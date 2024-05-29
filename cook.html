@@ -23,20 +23,22 @@ font-family: helvetica;
 <body>
     <div id="circle" ></div>
     <div id="right"  onclick="move()"><img src="right.png" alt=""></div>
-    <div id="right1" style="display:none;" onclick="document.getElementById('circle').style.marginLeft='260px';">text</div>
-
-</body>
+    </body>
 
 <script>
     const item = document.getElementById('circle');
+    // getting the position of the circle
     offsetX = circle.getBoundingClientRect().left;
+    // setting a variable to offsetX
     newValue = offsetX ;
     console.log(offsetX)
     function move(){
+        //Updating the variable, thereby updating the position of the circle
         newValue= newValue +50;
+        // Setting the circles position to the newValue
         document.getElementById('circle').style.left=`${newValue}px`; 
         console.log(offsetX)
-            }
+    }
 </script>
 
 </html>
