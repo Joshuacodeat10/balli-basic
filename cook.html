@@ -32,6 +32,17 @@ font-family: helvetica;
     // setting a variable to offsetX
     newValue = offsetX ;
     console.log(offsetX)
+
+    document.addEventListener("keydown", (event) => {
+       
+        
+        if ( event.keyCode === 37) {
+             newValue= newValue + 20;
+            document.getElementById('circle').style.left=`${newValue}px`;
+        }
+        
+  // do something
+    });
     function move(){
         //Updating the variable, thereby updating the position of the circle
         newValue= newValue +50;
