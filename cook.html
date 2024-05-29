@@ -35,12 +35,28 @@ font-family: helvetica;
 
     document.addEventListener("keydown", (event) => {
        
+            movementPixel=0;
+        if(newValue >= 8){
+        movementPixel = 20;
+        }
+       if(event.keyCode === 39){
+        newValue= newValue + 20;
+       }
+       if(event.keyCode === 37){
+        newValue= newValue - movementPixel;
+       }
+        console.log(newValue)
         
-        if ( event.keyCode === 37) {
-             newValue= newValue + 20;
+        if ( event.keyCode === 39) {
             document.getElementById('circle').style.left=`${newValue}px`;
         }
         
+           
+        if ( event.keyCode === 37) {
+            document.getElementById('circle').style.left=`${newValue}px`;
+        }
+    
+    
   // do something
     });
     function move(){
